@@ -1,0 +1,351 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  min-width: 1100px;
+  background: linear-gradient(90deg, #1c213d 0%, #222a30 100%);
+  background: #222a30;
+}
+header {
+  margin: 0 0 45px 0;
+}
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.top-menu div {
+  max-width: 40%;
+}
+.top-menu a,
+.top-menu-social a {
+  font-size: 12px;
+  text-decoration: none;
+}
+a.top-menu-title {
+  color: #77d563;
+  font-size: 12px;
+  font-weight: 600;
+}
+a.top-menu-title i {
+  color: white;
+  min-height: 28px;
+  min-width: 28px;
+  background-color: #77d563;
+  margin: 0 0 0 20px;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 15px;
+  text-align: center;
+  transform: rotate(-10deg);
+}
+a.top-menu-social {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 20px 0 0;
+}
+a.top-menu-social i {
+  background-color: white;
+  color: #1c213d;
+  min-height: 28px;
+  min-width: 28px;
+  text-align: center;
+  padding: 6px;
+  margin: 0 3px 0 0;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 16px;
+}
+a.top-menu-dark {
+  color: #9194b0;
+  margin: 0 0 0 20px;
+}
+a.top-menu-light {
+  color: #FFF;
+  margin: 0 0 0 20px;
+}
+.rate-logo img:last-child {
+  transform: scale(-1, 1);
+}
+.rate-logo {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 3px 0;
+}
+.top-menu-rate {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 0px;
+  width: 100%;
+  align-items: center;
+  color: #9194b0;
+  font-size: 7px;
+}
+.container {
+  max-width: 900px;
+  width: 70%;
+  margin: 0 auto;
+}
+.phone {
+  min-height: 550px;
+}
+.phone img {
+  position: absolute;
+}
+.phone .phone-image {
+  top: 0;
+  left: 50%;
+}
+.phone .card-image {
+  top: 40px;
+  left: calc(50% + 250px);
+}
+.phone h3 {
+  color: #fff;
+  font-size: 26px;
+  max-width: 40%;
+}
+.phone > p {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  max-width: calc(40% + 50px);
+}
+.phone form {
+  display: flex;
+  width: calc(50% + 15px);
+  justify-content: space-between;
+  margin: 50px 0 0 0;
+}
+.phone form .input-wrapper {
+  background-color: #353b4a;
+  color: #8a8ca8;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+}
+.phone form .input-wrapper input {
+  display: block;
+  background-color: #353b4a;
+  border: 0;
+  margin: 3px 0 0 0;
+  outline: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+.phone form .user-code {
+  width: 80px;
+}
+.phone form .user-code::before {
+  content: '+';
+  top: 28px;
+  position: absolute;
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+}
+.phone form .user-code input {
+  width: 25px;
+  margin: 3px 0 0 7px;
+}
+.phone form .user-phone {
+  flex-grow: 1;
+}
+.phone form .user-phone input {
+  width: 100%;
+}
+.phone form button {
+  background-color: #6e7ffc;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 10px;
+  padding: 0 30px;
+  cursor: pointer;
+  outline: none;
+}
+.phone .small-cards {
+  color: #fff;
+  display: flex;
+  margin: 40px 0 0 0;
+}
+.phone .small-cards .card {
+  display: flex;
+  align-items: center;
+  margin: 0 15px 0 0;
+  width: 150px;
+}
+.phone .small-cards .card i {
+  min-height: 28px;
+  min-width: 28px;
+  margin: 0 5px 0 0;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+.phone .small-cards .card .bg-green {
+  background-color: #27dc8f;
+}
+.phone .small-cards .card .bg-purple {
+  background-color: #8643af;
+}
+.phone .small-cards .card .content p {
+  margin: 0;
+  padding: 0;
+}
+.phone .small-cards .card .content p.content-large {
+  font-size: 12px;
+  font-weight: 600;
+}
+.phone .small-cards .card .content p.content-small {
+  font-size: 10px;
+}
+.phone .large-cards {
+  color: #fff;
+  display: flex;
+  margin: 40px 0 0 0;
+  max-width: calc(50% + 230px);
+}
+.phone .large-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 15px 0 0;
+  padding: 15px;
+  border-radius: 15px;
+  width: 150px;
+  background-color: #363d48;
+}
+.phone .large-cards .card i {
+  min-height: 36px;
+  min-width: 36px;
+  margin: 0 0 5px 0;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 24px;
+  text-indent: 1px;
+  text-align: center;
+}
+.phone .large-cards .card .bg-yellow {
+  background-color: #f7cb48;
+}
+.phone .large-cards .card .bg-pink {
+  background-color: #fec4dd;
+}
+.phone .large-cards .card .bg-purple {
+  background-color: #7a61ed;
+}
+.phone .large-cards .card .bg-red {
+  background-color: #cb282b;
+}
+.phone .large-cards .card p {
+  margin: 0;
+  padding: 0;
+}
+.phone .large-cards .card p.content-large {
+  font-size: 16px;
+  font-weight: 600;
+}
+.phone .large-cards .card p.content-small {
+  font-size: 14px;
+}
+.colored-cards {
+  display: flex;
+  justify-content: space-between;
+}
+.colored-cards-body {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+.colored-cards-control {
+  color: #fff;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+}
+.colored-cards .colored-cards-body {
+  overflow: hidden;
+  max-width: 860px;
+}
+.colored-cards .cards-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.colored-cards .cards-wrapper .card {
+  min-width: 200px;
+  max-width: 200px;
+  height: 320px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.colored-cards .cards-wrapper .card img {
+  margin: 10px 0;
+}
+.colored-cards .cards-wrapper .card p {
+  text-align: center;
+}
+.colored-cards .cards-wrapper .card p.content-large {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 15px 0;
+}
+.colored-cards .cards-wrapper .card p.content-small {
+  font-weight: 600;
+  font-size: 12px;
+  margin: 0;
+}
+.colored-cards .bg-yellow {
+  background-color: #c8a014;
+}
+.colored-cards .bg-pink {
+  background-color: #8761a6;
+}
+.colored-cards .bg-purple {
+  background-color: #4c29c6;
+}
+.colored-cards .bg-red {
+  background-color: #b45639;
+}
+.colored-cards .bg-green {
+  background-color: #588848;
+}
+.colored-cards .bg-brown {
+  background-color: #96693b;
+}
+.colored-cards .bg-cyan {
+  background-color: #0078ab;
+}
+.footer {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer p {
+  margin: 0;
+  font-size: 12px;
+  color: #fff;
+}
+.footer-title {
+  font-weight: 600;
+}
