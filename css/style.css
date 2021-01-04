@@ -98,24 +98,31 @@ a.top-menu-light {
 .phone img {
   position: absolute;
 }
-.phone .phone-image {
+.phone img.phone-image {
   top: 0;
   left: 50%;
 }
-.phone .card-image {
+.phone img.card-image {
   top: 40px;
   left: calc(50% + 250px);
 }
+.phone > p {
+  max-width: calc(40% + 100px);
+  color: #fff;
+}
+.phone > p.title {
+  font-size: 16px;
+}
+.phone > p.title a {
+  font-weight: 600;
+}
 .phone h3 {
   color: #fff;
-  font-size: 26px;
+  font-size: 32px;
   max-width: 40%;
 }
-.phone > p {
+.phone a {
   color: #fff;
-  font-size: 13px;
-  font-weight: 400;
-  max-width: calc(40% + 50px);
 }
 .phone form {
   display: flex;
@@ -200,15 +207,18 @@ a.top-menu-light {
 .phone .small-cards .card .bg-purple {
   background-color: #8643af;
 }
-.phone .small-cards .card .content p {
+.phone .small-cards .card .content {
   margin: 0;
   padding: 0;
 }
-.phone .small-cards .card .content p.content-large {
+.phone .small-cards .card .content-wrapper {
+  flex-grow: 1;
+}
+.phone .small-cards .card .content-large {
   font-size: 12px;
   font-weight: 600;
 }
-.phone .small-cards .card .content p.content-small {
+.phone .small-cards .card .content-small {
   font-size: 10px;
 }
 .phone .large-cards {

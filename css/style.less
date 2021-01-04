@@ -8,12 +8,12 @@ body {
     min-width: 1100px;
     background: linear-gradient(90deg, #1c213d 0%, #222a30 100%);
     background: #222a30;
-    
+
 }
 
 header {
     margin: 0 0 45px 0;
-    
+
 }
 
 .top-menu {
@@ -117,29 +117,37 @@ a.top-menu-light {
 
     img {
         position: absolute;
+
+        &.phone-image {
+            top: 0;
+            left: 50%;
+        }
+
+        &.card-image {
+            top: 40px;
+            left: calc(50% + 250px);
+        }
     }
 
-    .phone-image {
-        top: 0;
-        left: 50%;
-    }
-
-    .card-image {
-        top: 40px;
-        left: calc(50% + 250px);
+    >p {
+        max-width: calc(40% + 100px);
+        color: #fff;
+        &.title {
+            font-size: 16px;
+            a {
+                font-weight: 600;
+            }
+        }
     }
 
     h3 {
         color: #fff;
-        font-size: 26px;
+        font-size: 32px;
         max-width: 40%;
     }
 
-    >p {
+    a {
         color: #fff;
-        font-size: 13px;
-        font-weight: 400;
-        max-width: calc(40% + 50px);
     }
 
     form {
@@ -238,18 +246,20 @@ a.top-menu-light {
             }
 
             .content {
-                p {
-                    margin: 0;
-                    padding: 0;
+                margin: 0;
+                padding: 0;
 
-                    &.content-large {
-                        font-size: 12px;
-                        font-weight: 600;
-                    }
+                &-wrapper {
+                    flex-grow: 1;
+                }
 
-                    &.content-small {
-                        font-size: 10px;
-                    }
+                &-large {
+                    font-size: 12px;
+                    font-weight: 600;
+                }
+
+                &-small {
+                    font-size: 10px;
                 }
             }
         }
@@ -409,19 +419,19 @@ a.top-menu-light {
     }
 }
 
-.footer{
+.footer {
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
+
     p {
         margin: 0;
         font-size: 12px;
         color: #fff;
     }
 
-    &-copy {
-        
-    }
+    &-copy {}
+
     &-title {
         font-weight: 600;
     }
