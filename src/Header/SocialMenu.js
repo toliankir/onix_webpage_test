@@ -1,0 +1,38 @@
+export default function SocialMenuComponenet() {
+    const socialArr = [
+        {
+            rating: 750432,
+            link: "./",
+            classes: [
+                "fab",
+                "fa-facebook-f"
+            ]
+        },
+        {
+            rating: 610432,
+            link: "./",
+            classes: [
+                "fab",
+                "fa-twitter"
+            ]
+        },
+        {
+            rating: 43544,
+            link: "./",
+            classes: [
+                "fab",
+                "fa-instagram"
+            ]
+        }
+    ];
+    return (<div>
+        {
+            socialArr.map(({rating, link, classes}, index) => {
+                return (<a href={link} key={index} className="top-menu-social">
+                <i className={classes.join(' ')}></i>
+                {rating}
+            </a>)
+            })
+        }
+</div>);
+}

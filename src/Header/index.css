@@ -1,0 +1,79 @@
+header {
+    margin: 0 0 45px 0;
+  }
+  .top-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .top-menu div {
+    max-width: 40%;
+  }
+  .top-menu a,
+  .top-menu-social a {
+    font-size: 12px;
+    text-decoration: none;
+  }
+  a.top-menu-title {
+    color: #77d563;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  a.top-menu-title i {
+    color: #fff;
+    min-height: 28px;
+    min-width: 28px;
+    background-color: #77d563;
+    margin: 0 0 0 20px;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 15px;
+    text-align: center;
+    transform: rotate(-10deg);
+  }
+  a.top-menu-social {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 20px 0 0;
+  }
+  a.top-menu-social i {
+    background-color: #fff;
+    color: #1c213d;
+    min-height: 28px;
+    min-width: 28px;
+    text-align: center;
+    padding: 6px;
+    margin: 0 3px 0 0;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  a.top-menu-dark {
+    color: #9194b0;
+    margin: 0 0 0 20px;
+  }
+  a.top-menu-light {
+    color: #fff;
+    margin: 0 0 0 20px;
+  }
+  .rate-logo img:last-child {
+    transform: scale(-1, 1);
+  }
+  .rate-logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 3px 0;
+  }
+  .top-menu-rate {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+    color: #9194b0;
+    font-size: 7px;
+  }
