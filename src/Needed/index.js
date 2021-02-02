@@ -22,9 +22,9 @@ export default class NeededComponent extends React.Component {
             </thead>
             <tbody>
                 { [...Array(6)].map((_, index) => {
-                return <tr key={`tr_${index}`}>{
-                    [...Array(6)].map((_, index) => <td key={`td_${index}`}>{this.getRandomWordFromLorem()}</td>)
-                }</tr>
+                return <tr key={`tr_${index}`}>
+                    { [...Array(6)].map((_, index) => <td key={`td_${index}`}>{this.getRandomWordFromLorem()}</td>) }
+                </tr>
                 }) }
             </tbody>
         </table>
