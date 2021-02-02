@@ -7,7 +7,7 @@ export default class ColoredCardComponent extends React.Component {
     }
     
     getImageLink(imageSrc) {
-        return `./img/icon/${imageSrc}`;
+        return new URL(`${window.location}/img/icon/${imageSrc}`);
     }
 
     render() {
