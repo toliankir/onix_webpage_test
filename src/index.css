@@ -9,4 +9,11 @@ body {
   background: linear-gradient(90deg, #1c213d 0%, #222a30 100%);
   background: #222a30;
   margin: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
 }
