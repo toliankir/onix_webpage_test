@@ -1,13 +1,16 @@
-export default function RatingComponenet() {
-    const rate = 4.8;
-    return (
-        <div className="top-menu-rate">
+import React from "react";
+
+export default class RatingComponenet extends React.Component {
+    rate = 4.8;
+    
+    render() {
+        return <div className="top-menu-rate">
         <div className="rate-logo">
             <img src={"./img/icon/wing.png"} alt="wing" />
-                {rate}
+                {this.rate}
             <img src={"./img/icon/wing.png"} alt="wing" />
         </div>
         1432096 RATINGS
-    </div>
-    );
+    </div>;
+    }
 }

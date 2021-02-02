@@ -1,7 +1,8 @@
+import React from "react";
 import ColoredCardComponent from "./ColoredCard";
 
-export default function ColoredCradsComponent() {
-    let cards = [
+export default class ColoredCradsComponent extends React.Component {
+    cards = [
         {
             image: {
                 src: "1.png",
@@ -66,17 +67,20 @@ export default function ColoredCradsComponent() {
             class: "bg-purple"
         },
     ];
-    return (<div className="colored-cards container">
-    <div id="control-left" className="colored-cards-control">
-        &lt;
-    </div>
-    <div className="colored-cards-body">
-        <div className="cards-wrapper">
-           { cards.map((card, index) => <ColoredCardComponent key={index} card={card}/>)}
-        </div>
-    </div>
-    <div id="control-right" className="colored-cards-control">
-        &gt;
-    </div>
-</div>);
+    
+    render() {
+        return (<div className="colored-cards container">
+            <div id="control-left" className="colored-cards-control">
+                &lt;
+            </div>
+            <div className="colored-cards-body">
+                <div className="cards-wrapper">
+                { this.cards.map((card, index) => <ColoredCardComponent key={index} card={card}/>)}
+                </div>
+            </div>
+            <div id="control-right" className="colored-cards-control">
+                &gt;
+            </div>
+        </div>);
+    }
 } 

@@ -1,5 +1,7 @@
-export default function SocialMenuComponenet() {
-    const socialArr = [
+import React from "react";
+
+export default class SocialMenuComponenet extends React.Component {
+    socialArr = [
         {
             rating: 750432,
             link: "./",
@@ -25,14 +27,16 @@ export default function SocialMenuComponenet() {
             ]
         }
     ];
-    return (<div>
+    render() {
+    return <div>
         {
-            socialArr.map(({rating, link, classes}, index) => {
+            this.socialArr.map(({rating, link, classes}, index) => {
                 return (<a href={link} key={index} className="top-menu-social">
                 <i className={classes.join(' ')}></i>
                 {rating}
             </a>)
             })
         }
-</div>);
+    </div>;
+    }
 }

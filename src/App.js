@@ -1,14 +1,17 @@
-import HeaderComponenet from './Header';
-import './App.css';
-import ColoredCradsComponent from './ColoredCards';
+import React from "react";
+import HeaderComponenet from "./Header";
+import ColoredCradsComponent from "./ColoredCards";
+import FooterComponent from "./Footer";
+import "./App.css";
 
-
-function App() {
-  return (<div>
-    <HeaderComponenet />
-    <ColoredCradsComponent />
-  </div>
-  );
+class App extends React.Component {
+  render() {
+    return <div>
+      <HeaderComponenet />
+      <ColoredCradsComponent />
+      <FooterComponent />
+    </div>;
+  }
 }
 
 export default App;

@@ -1,5 +1,7 @@
-export default function LinksMenuComponent() {
-    const linksArr = [
+import React from "react";
+
+export default class LinksMenuComponent extends React.Component {
+    linksArr = [
         {
             link: "./",
             title: "Catalogus"
@@ -21,11 +23,14 @@ export default function LinksMenuComponent() {
             title: "Wallet"
         }
     ];
-    return (<div>
+    
+    render() {
+    return <div>
         <a href={"./"} className="top-menu-title">
             <i className="fas fa-briefcase"></i>
             MAPS.ME
         </a>
-        {linksArr.map(({link, title}, index) => <a href={link} key={index} className="top-menu-dark">{title}</a>)}
-    </div>);
+        {this.linksArr.map(({link, title}, index) => <a href={link} key={index} className="top-menu-dark">{title}</a>)}
+    </div>;
+    }
 }

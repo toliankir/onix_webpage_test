@@ -1,15 +1,21 @@
-export default function ColoredCardComponent({card}) {
-    return (<div className={getClasses(card.class)}>
-    <img src={getImageLink(card.image.src)} alt={card.image.desc} />
-    <p className="content-large">{card.title}</p>
-    <p className="content-small">{card.content}</p>                
-</div>);
-}
+import React from "react";
 
-function getClasses(className) {
-    return ["card", className].join(" ");
-}
+export default class ColoredCardComponent extends React.Component {
+    
+    getClasses(className) {
+        return ["card", className].join(" ");
+    }
+    
+    getImageLink(imageSrc) {
+        return `./img/icon/${imageSrc}`;
+    }
 
-function getImageLink(imageSrc) {
-    return `./img/icon/${imageSrc}`;
+    render() {
+        const { card } = this.props;
+    return <div className={this.getClasses(card.class)}>
+        <img src={this.getImageLink(card.image.src)} alt={card.image.desc} />
+        <p className="content-large">{card.title}</p>
+        <p className="content-small">{card.content}</p>                
+    </div>;
+    }
 }
