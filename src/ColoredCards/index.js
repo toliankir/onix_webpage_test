@@ -2,6 +2,12 @@ import React from "react";
 import ColoredCardComponent from "./ColoredCard";
 
 export default class ColoredCradsComponent extends React.Component {
+    state = {
+        cardPosition: 0,
+    }
+
+    cardWidth = 210;
+
     cards = [
         {
             image: {
@@ -67,18 +73,36 @@ export default class ColoredCradsComponent extends React.Component {
             class: "bg-purple"
         },
     ];
+
+    handleSlideLeft = () => 
+    {
+        this.setState({
+            cardPosition: this.state.cardPosition - this.cardWidth < -((this.cards.length - 4) * this.cardWidth) ?
+            this.state.cardPosition : this.state.cardPosition - this.cardWidth,
+        });
+    }
     
+    handleSlideRight = () => {
+        this.setState({
+            cardPosition: this.state.cardPosition + this.cardWidth > 0 ? 0 : this.state.cardPosition + this.cardWidth,
+        });
+    }
+
     render() {
+        const {cardPosition} = this.state;
         return (<div className="colored-cards container">
-            <div id="control-left" className="colored-cards-control">
+            <div id="control-left" className="colored-cards-control" onClick={this.handleSlideLeft}>
                 &lt;
             </div>
             <div className="colored-cards-body">
-                <div className="cards-wrapper">
+                <div className="cards-wrapper" style={{
+                    transition: 'transform ease-out 450ms',
+                    transform: `translateX(${cardPosition}px)`
+                }}>
                 { this.cards.map((card, index) => <ColoredCardComponent key={index} card={card}/>)}
                 </div>
             </div>
-            <div id="control-right" className="colored-cards-control">
+            <div id="control-right" className="colored-cards-control" onClick={this.handleSlideRight}>
                 &gt;
             </div>
         </div>);
