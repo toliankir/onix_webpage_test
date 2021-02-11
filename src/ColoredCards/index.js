@@ -77,7 +77,7 @@ export default class ColoredCradsComponent extends React.Component {
     handleSlideLeft = () => 
     {
         this.setState({
-            cardPosition: this.state.cardPosition - this.cardWidth < -((this.cards.length - 4) * this.cardWidth) ?
+            cardPosition: this.state.cardPosition - this.cardWidth < -((this.cards.length - 1) * this.cardWidth) ?
             this.state.cardPosition : this.state.cardPosition - this.cardWidth,
         });
     }

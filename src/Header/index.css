@@ -1,3 +1,5 @@
+
+
 header {
     margin: 5px 0 45px 0;
   }
@@ -67,6 +69,7 @@ header {
     font-weight: 800;
     margin: 0 0 3px 0;
   }
+
   .top-menu-rate {
     display: flex;
     position: absolute;
@@ -77,3 +80,39 @@ header {
     color: #9194b0;
     font-size: 7px;
   }
+  
+  @media (max-width: 900px) {
+    a.top-menu-title i {
+      margin: 0;
+    }
+    .top-menu-rate {
+      position: relative;
+    }
+    .top-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .top-menu div {
+      text-align: center;
+      margin: 5px 0;
+      min-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    a.top-menu-title {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+    a.top-menu-social {
+      margin: 0;
+    }
+    a.top-menu-dark {
+      margin: 0;
+    }
+  } 
+  

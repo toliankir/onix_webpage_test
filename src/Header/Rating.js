@@ -1,16 +1,24 @@
 import React from "react";
 
 export default class RatingComponenet extends React.Component {
-    rate = 4.8;
+    constructor() {
+        super();
+        this.state = {
+            rate: 4.8,
+            ratings: 1432096
+        };
+    }
+    
+    
     
     render() {
         return <div className="top-menu-rate">
         <div className="rate-logo">
             <img src={"./img/icon/wing.png"} alt="wing" />
-                {this.rate}
+                {this.state.rate}
             <img src={"./img/icon/wing.png"} alt="wing" />
         </div>
-        1432096 RATINGS
+        {this.state.ratings}
     </div>;
     }
 }

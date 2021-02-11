@@ -10,7 +10,6 @@ class App extends React.Component {
   render() {
     return <div className="main-container">
       <HeaderComponenet />
-      <MainContentComponent />
       <ColoredCradsComponent />
       <NeededComponent />
       <FooterComponent />

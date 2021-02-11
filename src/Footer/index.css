@@ -18,4 +18,8 @@
   .footer-copy {
     font-size: 13px;
   }
-  
+  @media (max-width: 900px) {
+    .footer {
+      padding: 20px 0;
+    }
+  }
