@@ -1,0 +1,62 @@
+.large-cards {
+    color: #fff;
+    display: flex;
+    margin: 40px 0 0 0;
+    max-width: calc(50% + 230px);
+  }
+  .large-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 15px 0 0;
+    padding: 15px;
+    border-radius: 15px;
+    width: 150px;
+    background-color: #363d48;
+  }
+  .large-cards .card i {
+    min-height: 36px;
+    min-width: 36px;
+    margin: 0 0 5px 0;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 24px;
+    text-indent: 1px;
+    text-align: center;
+  }
+  .large-cards .card .bg-yellow {
+    background-color: #f7cb48;
+  }
+  .large-cards .card .bg-pink {
+    background-color: #fec4dd;
+  }
+  .large-cards .card .bg-purple {
+    background-color: #7a61ed;
+  }
+  .large-cards .card .bg-red {
+    background-color: #cb282b;
+  }
+  .large-cards .card p {
+    margin: 0;
+    padding: 0;
+  }
+  .large-cards .card p.content-large {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .large-cards .card p.content-small {
+    font-size: 14px;
+  }
+  @media (max-width: 900px) {
+    .large-cards {
+      max-width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .large-cards .card {
+     width: 45%;
+     margin-bottom: 15px;
+    }
+  }

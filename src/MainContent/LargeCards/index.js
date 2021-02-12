@@ -1,5 +1,6 @@
 import React from "react";
 import LargeCardComponent from "./LargeCard";
+import "./index.css";
 
 export default class LargeCardsComponent extends React.Component {
 cards = [

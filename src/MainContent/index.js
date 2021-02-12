@@ -1,6 +1,7 @@
 import React from "react";
 import SmallCardsComponent from "./SmallCards";
-import LargeCardsComponent from "./LargeCards"
+import LargeCardsComponent from "./LargeCards";
+import "./index.css";
 
 export default class MainContentComponent extends React.Component {
     render() {
