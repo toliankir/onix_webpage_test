@@ -1,0 +1,76 @@
+.colored-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .colored-cards-body {
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  .colored-cards-control {
+    color: #fff;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    font-weight: 800;
+    cursor: pointer;
+    user-select: none;
+  }
+  .colored-cards .colored-cards-body {
+    overflow: hidden;
+    max-width: 860px;
+  }
+  .colored-cards .colored-cards-body .cards-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .colored-cards .colored-cards-body .cards-wrapper .card {
+    min-width: 200px;
+    max-width: 200px;
+    height: 320px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px 0 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .colored-cards .colored-cards-body .cards-wrapper .card img {
+    margin: 10px 0;
+  }
+  .colored-cards .colored-cards-body .cards-wrapper .card p {
+    text-align: center;
+  }
+  .colored-cards .colored-cards-body .cards-wrapper .card p.content-large {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 0 15px 0;
+  }
+  .colored-cards .colored-cards-body .cards-wrapper .card p.content-small {
+    font-weight: 600;
+    font-size: 12px;
+    margin: 0;
+  }
+  .colored-cards .colored-cards-body .bg-yellow {
+    background-color: #c8a014;
+  }
+  .colored-cards .colored-cards-body .bg-pink {
+    background-color: #8761a6;
+  }
+  .colored-cards .colored-cards-body .bg-purple {
+    background-color: #4c29c6;
+  }
+  .colored-cards .colored-cards-body .bg-red {
+    background-color: #b45639;
+  }
+  .colored-cards .colored-cards-body .bg-green {
+    background-color: #588848;
+  }
+  .colored-cards .colored-cards-body .bg-brown {
+    background-color: #96693b;
+  }
+  .colored-cards .colored-cards-body .bg-cyan {
+    background-color: #0078ab;
+  }

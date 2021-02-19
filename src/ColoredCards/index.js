@@ -1,5 +1,6 @@
 import React from "react";
 import ColoredCardComponent from "./ColoredCard";
+import "./index.css";
 
 export default class ColoredCradsComponent extends React.Component {
     state = {
@@ -77,14 +78,14 @@ export default class ColoredCradsComponent extends React.Component {
     handleSlideLeft = () => 
     {
         this.setState({
-            cardPosition: this.state.cardPosition - this.cardWidth < -((this.cards.length - 1) * this.cardWidth) ?
-            this.state.cardPosition : this.state.cardPosition - this.cardWidth,
+            cardPosition: this.state.cardPosition + this.cardWidth > 0 ? 0 : this.state.cardPosition + this.cardWidth,
         });
     }
     
     handleSlideRight = () => {
         this.setState({
-            cardPosition: this.state.cardPosition + this.cardWidth > 0 ? 0 : this.state.cardPosition + this.cardWidth,
+            cardPosition: this.state.cardPosition - this.cardWidth < -((this.cards.length - 1) * this.cardWidth) ?
+            this.state.cardPosition : this.state.cardPosition - this.cardWidth,
         });
     }
 
