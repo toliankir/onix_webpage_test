@@ -47,16 +47,24 @@ button {
   margin: 0 10px;
   filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.25));
 }
+
 button:hover {
   filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.45));
 }
+
 button.red {
   color: #FFF;
   background-color: #b45639;
 }
+
 button.green {
   color: #FFF;
   background-color: #588848;
+}
+
+button.yellow {
+  color: #FFF;
+  background-color: #c8a014;
 }
 
 input {
@@ -72,6 +80,7 @@ input {
 input.green {
   border:2px solid #588848;
 }
+
 label {
   font-weight: bold;
   color: #FFF;

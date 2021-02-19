@@ -36,9 +36,25 @@ export default class ArrayTaskComponent extends React.Component {
         });
     }
 
-    showArray = () => {
+    ownArraySort = (arr, func) => {
+        const newArr = [...arr];
+        for (let i = 0; i < newArr.length - 1; i++) {
+            if (func(newArr[i + 1], newArr[i]) < 0) {
+                newArr.push(newArr[i]);
+                newArr.splice(i,1);
+                i = -1;
+            }
+        }
+        return newArr;
+    }
+
+    testOwnSort = () => {
+        this.showArray(this.ownArraySort(this.data, (a, b) => b.date - a.date));
+    }
+
+    showArray = (arr) => {
         const outArr = [];
-        this.data.forEach(el => outArr.push([el.date, el.date]));
+        arr.forEach(el => outArr.push([el.date, el.description]));
         console.table(outArr);
     }
 
@@ -67,7 +83,7 @@ export default class ArrayTaskComponent extends React.Component {
         this.data.push(newElement);
         this.inputedData.push(newElement);
         this.sortArray();
-        this.showArray();
+        this.showArray(this.data);
     }
 
     deleteData = () => {
@@ -77,7 +93,7 @@ export default class ArrayTaskComponent extends React.Component {
             return;
         }
         this.data.splice(this.data.indexOf(lastAdded), 1);
-        this.showArray();
+        this.showArray(this.data);
     }
 
     render() {
@@ -105,6 +121,7 @@ export default class ArrayTaskComponent extends React.Component {
                     onChange={this.changeState}></input>
                 <button onClick={this.addData} className="green">Add</button>
                 <button onClick={this.deleteData} className="red">Delete</button>
+                <button onClick={this.testOwnSort} className="yellow">Own array sort</button>
             </div>
             <table>
                 <thead>
